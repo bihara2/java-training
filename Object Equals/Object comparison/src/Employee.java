@@ -11,12 +11,14 @@ public class Employee {
         this.address=address;
     }
 
-    public boolean equals(Employee emp){
-       if(emp==null){
+    @Override
+    public boolean equals(Object obj){
+       if(obj==null){
            return false;
-       }else if (!(emp instanceof Employee)) {
+       }else if (!(obj instanceof Employee)) {
             return false;
         } else {
+           Employee emp=(Employee) obj;
            return this.id.equals(emp.id)&&this.emp_code.equals(emp.emp_code)&&true||false;
        }
 
