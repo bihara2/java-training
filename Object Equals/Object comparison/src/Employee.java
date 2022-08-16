@@ -15,11 +15,13 @@ public class Employee {
     public boolean equals(Object obj){
        if(obj==null){
            return false;
-       }else if (!(obj instanceof Employee)) {
-            return false;
-        } else {
+
+       }else if (obj instanceof Employee) {
            Employee emp=(Employee) obj;
            return this.id.equals(emp.id)&&this.emp_code.equals(emp.emp_code)&&true||false;
+
+        } else {
+           return false;
        }
 
     }
