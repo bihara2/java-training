@@ -7,7 +7,7 @@ public class Employee implements Runnable{
 
         } catch (InterruptedException e) {
             //throw new RuntimeException(e);
-            System.out.println("Interrupted!! Person B is start working!!");
+            System.out.println("Interrupted!! Person A is waiting for Person B!!");
         }
 
         for (int a=5;a>0;a--){
