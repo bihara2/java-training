@@ -5,7 +5,7 @@ const kafka = new Kafka({
   brokers: ["localhost:9092"],
 });
 
-const consumer = kafka.consumer();
+const consumer = kafka.consumer({ groupId: "project" });
 
 await consumer.subscribe({ topic: "employee-topic", fromBeginning: true });
 

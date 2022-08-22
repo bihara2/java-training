@@ -13,7 +13,7 @@ const publish = async () => {
   for (let i = 0; i < 10; i++) {
     await producer.send({
       topic: "employee-topic",
-      messages: [{ key: i.toString(), value: JSON.stringify({ empName: "Nairbi " + i }) }],
+      messages: [{ key: i.toString(), value: JSON.stringify({ empName: "Nairobi " + i }) }],
     });
   }
 };
