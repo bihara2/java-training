@@ -1,0 +1,15 @@
+{
+  "name": "kafka-demo",
+  "version": "1.0.0",
+  "description": "kafka demo for Trainings",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bihara Jayawardhana",
+  "license": "ISC",
+  "dependencies": {
+    "kafkajs": "^2.2.0"
+  }
+}
