@@ -1,13 +1,13 @@
 import { Kafka } from "kafkajs";
 
 const kafka = new Kafka({
-  clientId: "employee-service",
+  clientId: "sales-service",
   brokers: ["localhost:9092"],
 });
 
-const consumer = kafka.consumer({ groupId: "project" });
+const consumer = kafka.consumer({ groupId: "sales-team-1" });
 
-await consumer.subscribe({ topic: "employee-topic", fromBeginning: true });
+await consumer.subscribe({ topic: "product-sales-topic", fromBeginning: true });
 
 await consumer.run({
   eachMessage: async ({ topic, partition, message }) => {
