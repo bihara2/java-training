@@ -21,8 +21,4 @@
 		<property name="suffix" value=".jsp"></property>
 	</bean>
 
-	<bean name="user" class="springmvc.model.User">
-	</bean>
-
-
 </beans>
