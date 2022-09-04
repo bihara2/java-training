@@ -1,7 +1,8 @@
-import hello from "./hello";
+import { fetch, create } from "./product";
 
 const functions = {
-  hello,
+  fetch,
+  create,
 };
 
 export default functions;
