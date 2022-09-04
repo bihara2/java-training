@@ -1,8 +1,9 @@
-import { fetch, create } from "./product";
+import { fetch, create, fetchAll } from "./product";
 
 const functions = {
   fetch,
   create,
+  fetchAll,
 };
 
 export default functions;

@@ -30,4 +30,16 @@ const fetch = {
   ],
 };
 
-export { create, fetch };
+const fetchAll = {
+  handler: `${handlerPath(__dirname)}/fetchAll.main`,
+  events: [
+    {
+      http: {
+        method: "get",
+        path: "products",
+      },
+    },
+  ],
+};
+
+export { create, fetch, fetchAll };
