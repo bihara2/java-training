@@ -26,12 +26,12 @@ const serverlessConfiguration: AWS = {
     environment: {
       AWS_NODEJS_CONNECTION_REUSE_ENABLED: "1",
       NODE_OPTIONS: "--enable-source-maps --stack-trace-limit=1000",
-      DBHOSTNAME: "your-host-name",
-      DBPORT: "5432",
-      DBNAME: "productdb",
-      DBUSERNAME: "postgres",
-      DBPASSWORD: "",
-      DBSCHEMA: "public",
+      DBHOSTNAME: "${ssm:/product-management-service/${sls:stage}/database/pg/hostname}",
+      DBPORT: "${ssm:/product-management-service/${sls:stage}/database/pg/port}",
+      DBNAME: "${ssm:/product-management-service/${sls:stage}/database/pg/database}",
+      DBUSERNAME: "${ssm:/product-management-service/${sls:stage}/database/pg/username}",
+      DBPASSWORD: "${ssm:/product-management-service/${sls:stage}/database/pg/password}",
+      DBSCHEMA: "${ssm:/product-management-service/${sls:stage}/database/pg/schema}",
     },
   },
   // import the function via paths
