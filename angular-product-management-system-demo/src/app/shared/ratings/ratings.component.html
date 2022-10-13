@@ -1,0 +1,3 @@
+<div class="row" *ngIf="ratings >= 0" (click)="onClickRatings()">
+  <ngb-rating [max]="5" [(rate)]="ratings" [readonly]="true"></ngb-rating>
+</div>

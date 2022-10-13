@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import products from './data/products.json';
+import { Products } from './product.model';
 
 @Component({
   selector: 'pm-products',
@@ -9,8 +10,9 @@ import products from './data/products.json';
 export class ProductsComponent implements OnInit {
   title: string = 'Product Management System';
 
-  products: any[] = products;
-  filteredProducts: any[] = products;
+  products: Products[] = products;
+  filteredProducts: Products[] = products;
+  message: string = '';
 
   showImage: boolean = false;
   private _nameFilter: string = '';
@@ -37,5 +39,9 @@ export class ProductsComponent implements OnInit {
       let keyword: string = this._nameFilter.toLowerCase();
       return product.name.toLowerCase().indexOf(keyword) > -1;
     });
+  }
+
+  onMessageReceived(value: string) {
+    this.message = value;
   }
 }

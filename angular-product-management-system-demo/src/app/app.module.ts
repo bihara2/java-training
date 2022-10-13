@@ -5,10 +5,17 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
 import { LkrFormaterPipe } from './shared/lkr-formater.pipe';
+import { RatingsComponent } from './shared/ratings/ratings.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
-  declarations: [AppComponent, ProductsComponent, LkrFormaterPipe],
-  imports: [BrowserModule, FormsModule],
+  declarations: [
+    AppComponent,
+    ProductsComponent,
+    LkrFormaterPipe,
+    RatingsComponent,
+  ],
+  imports: [BrowserModule, FormsModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,5 +1,9 @@
 <div class="card">
-  <div class="card-header">{{ title }}</div>
+  <div class="card-header">
+    <h4>{{ title }}</h4>
+    <br />
+    <p class="text-danger">{{ message }}</p>
+  </div>
   <div class="card-body">
     <div class="row">
       <div class="col-md-2">Product Name filter:</div>
@@ -52,7 +56,12 @@
                   | lkrFormater: "Rs: "
               }}
             </td>
-            <td>{{ product.rating }}</td>
+            <td>
+              <pm-ratings
+                [ratings]="product.rating"
+                (ratingClickEvent)="onMessageReceived($event)"
+              ></pm-ratings>
+            </td>
           </tr>
         </tbody>
       </table>
