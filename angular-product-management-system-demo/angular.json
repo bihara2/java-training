@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "demo-app-ems": {
+    "angular-product-management-system-demo": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,12 +12,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "em",
+      "prefix": "pm",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/demo-app-ems",
+            "outputPath": "dist/angular-product-management-system-demo",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,10 +69,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "demo-app-ems:build:production"
+              "browserTarget": "angular-product-management-system-demo:build:production"
             },
             "development": {
-              "browserTarget": "demo-app-ems:build:development"
+              "browserTarget": "angular-product-management-system-demo:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -80,7 +80,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-app-ems:build"
+            "browserTarget": "angular-product-management-system-demo:build"
           }
         },
         "test": {
