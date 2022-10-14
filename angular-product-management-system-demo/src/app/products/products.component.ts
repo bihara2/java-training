@@ -1,16 +1,22 @@
-import { Component, OnInit } from '@angular/core';
-import products from './data/products.json';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+//import products from './data/products.json';
 import { Products } from './product.model';
+import { ProductService } from './product.service';
 
 @Component({
   selector: 'pm-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.scss'],
 })
-export class ProductsComponent implements OnInit {
-  products: Products[] = products;
-  filteredProducts: Products[] = products;
+export class ProductsComponent implements OnInit, OnDestroy {
+  //
+  products!: Products[];
+  filteredProducts!: Products[];
+
   message: string = '';
+
+  subscriber!: Subscription;
 
   showImage: boolean = false;
   private _nameFilter: string = '';
@@ -24,9 +30,20 @@ export class ProductsComponent implements OnInit {
     return this._nameFilter;
   }
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.subscriber = this.productService.getAllProducts().subscribe({
+      next: (data) => {
+        this.products = data;
+        this.filteredProducts = data;
+      },
+    });
+  }
+
+  ngOnDestroy(): void {
+    this.subscriber.unsubscribe();
+  }
 
   toggleImage() {
     this.showImage = !this.showImage;

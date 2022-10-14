@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     this._productId = value;
   }
 
-  get productId() {
+  get productId(): number {
     return this._productId;
   }
 

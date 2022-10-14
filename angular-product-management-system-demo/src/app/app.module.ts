@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { ProductsComponent } from './products/products.component';
@@ -22,6 +23,7 @@ import { CreateProductGuard } from './products/create-product.guard';
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     NgbModule,
     RouterModule.forRoot([
       { path: 'products', component: ProductsComponent },
