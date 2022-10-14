@@ -8,8 +8,6 @@ import { Products } from './product.model';
   styleUrls: ['./products.component.scss'],
 })
 export class ProductsComponent implements OnInit {
-  title: string = 'Product Management System';
-
   products: Products[] = products;
   filteredProducts: Products[] = products;
   message: string = '';
