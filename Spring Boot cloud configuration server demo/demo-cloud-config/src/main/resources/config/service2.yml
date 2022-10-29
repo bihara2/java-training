@@ -1,0 +1,3 @@
+service:
+  greeting: This is from Service 2
+  msg: msg 2 from service 2

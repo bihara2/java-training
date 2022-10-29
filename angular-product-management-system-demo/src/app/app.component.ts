@@ -8,3 +8,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Product Management System';
 }
+
+//YCU8Q~p0.MVOuLfxkYzwuunfuoMYvYe15YeUcaOr    - value
