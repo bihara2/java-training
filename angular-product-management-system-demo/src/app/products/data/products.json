@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "name": "Iphone 10",
+    "category": "Electronic",
+    "price": 100000,
+    "quantity": 5,
+    "rating": 5,
+    "image": "https://robohash.org/impeditlaudantiumunde.png?size=50x50&set=set1"
+  },
+  {
+    "id": 2,
+    "name": "Iphone 11",
+    "category": "Electronic",
+    "price": 200000,
+    "quantity": 2,
+    "rating": 2,
+    "image": "https://robohash.org/quaedelenitiminima.png?size=50x50&set=set1"
+  },
+  {
+    "id": 3,
+    "name": "ASUS RTX 4090 24GB GDDR6X",
+    "category": "Graphic Card",
+    "price": 1090000,
+    "quantity": 1,
+    "rating": 4,
+    "image": "https://robohash.org/dolorexercitationemet.png?size=50x50&set=set1"
+  },
+  {
+    "id": 4,
+    "name": "G.SKILL TRIDENTZ5 RGB 32GB",
+    "category": "Memory",
+    "price": 120000,
+    "quantity": 2,
+    "rating": 1,
+    "image": "https://robohash.org/remnecessitatibusmagnam.png?size=50x50&set=set1"
+  },
+  {
+    "id": 5,
+    "name": "ASUS TUF GAMING X670E-PLUS WIFI",
+    "category": "Motherboard",
+    "price": 175000.75,
+    "quantity": 3,
+    "rating": 0,
+    "image": "https://robohash.org/optionesciuntratione.png?size=50x50&set=set1"
+  }
+]
